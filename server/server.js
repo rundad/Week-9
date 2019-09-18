@@ -15,7 +15,7 @@ MongoClient.connect(url, {poolSize:10,useNewUrlParser: true,useUnifiedTopology: 
         const dbName = 'mydb';
         const db = client.db(dbName);
 
-        require('./routes/add.js')(db,app);
+        require('./routes/add.js')(db, app);
         require('./routes/read.js')(db,app);
         require('./routes/update.js')(db,app, ObjectID);
         // require('./routes/api-getlist.js')(db,app);
@@ -27,3 +27,4 @@ MongoClient.connect(url, {poolSize:10,useNewUrlParser: true,useUnifiedTopology: 
     require('./listen.js')(http);
 
 });
+

@@ -1,4 +1,4 @@
-module.exports = function(db,app){
+module.exports = function(db, app){
     //Route to manage adding a product
   
     app.post('/add',function(req,res){
@@ -7,8 +7,9 @@ module.exports = function(db,app){
         if (!req.body) {
          return res.sendStatus(400)
         }
-        product = req.body;
 
+        product = req.body;
+        console.log(product)
         const collection = db.collection('products');
         //check for duplicate id's
         collection.find({'id':product.id}).count((err,count)=>{
