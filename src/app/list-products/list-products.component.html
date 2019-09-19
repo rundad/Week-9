@@ -9,6 +9,7 @@
             <th>Description</th>
             <th>Price</th>
             <th>Units</th>
+            <th>_id</th>
         </tr>
         <tr style="padding-top:20px;" *ngFor="let product of products"> 
             <td>{{product.id}}</td> 
@@ -16,6 +17,7 @@
             <td>{{product.description}}</td>  
             <td>{{product.price}}</td>  
             <td>{{product.units}}</td>
+            <td>{{product._id}}</td>
             <td>
                 <span class="btn btn-primary" [routerLink]="['/update',product._id]"> <i class="fa fa-spinner"></i> Edit</span> 
                 &nbsp; 
